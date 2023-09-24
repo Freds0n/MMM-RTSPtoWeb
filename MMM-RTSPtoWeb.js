@@ -8,7 +8,7 @@ Module.register("MMM-RTSPtoWeb", {
     suspendedForUserPresence: false,
 
     defaults: {
-        width: "50%",
+        style: "width:100%;",
         token: "",
         url: "",
     },
@@ -53,7 +53,7 @@ Module.register("MMM-RTSPtoWeb", {
             this.video.controls = false;
             this.video.volume = 1;
             this.video.muted = true;
-            this.video.style.maxWidth = this.config.width;
+            this.video.style = this.config.style;
             this.video.playsInline = true;
             this.video.srcObject = this.stream;
 
